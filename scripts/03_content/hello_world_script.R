@@ -7,9 +7,12 @@ data("data_lionfish")
 
 # Create a simple plot
 p <- ggplot(data_lionfish,
-       aes(x = total_length_mm, y = total_weight_gr)) +
+       aes(x = total_length_mm, y = total_weight_gr, color = "pink")) +
   geom_point() +
   facet_wrap(~site)
 
+?data
+
 # Save plot
 ggsave(plot = p, filename = "results/figures/first_plot.png")
+
